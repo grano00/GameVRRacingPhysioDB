@@ -2,6 +2,8 @@ MatlabDataset/*/*/*/*/*.mat
 MatlabDataset/*/*/*/*.mat
 MatlabDataset/*/*/*.mat
 MatlabDataset/*/*.mat
+MatlabDataset/*.mat
 *.asv
 *test*
+test*
 *.bk
