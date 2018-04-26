@@ -3,6 +3,7 @@ MatlabDataset/*/*/*/*.mat
 MatlabDataset/*/*/*.mat
 MatlabDataset/*/*.mat
 MatlabDataset/*.mat
+gsrTable*.txt
 *.asv
 *test*
 test*
