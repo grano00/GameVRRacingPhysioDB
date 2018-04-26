@@ -1,0 +1,48 @@
+ID: 05
+Name Arousal-NOVRGame2
+
+R: 0.8998480783 with p-val of corr 0.000000
+R-square: 0.8097265640
+RMSE: 0.0947730630
+MSE: 0.0089819335
+MAE: 0.0603600641
+N* of Features 5
+N* of instances 181
+
+
+
+ Model Info:
+Gaussian process regression (GPR) model
+PARAMETER:
+KernelFunction: ARDRationalQuadratic
+BasisFunction: Constant
+----------------------
+Fold 1
+Sigma: 0.0021273831
+Beta: 0.1655572591
+N* of test 36
+Fold RMSE 0.1110302736
+----------------------
+Fold 2
+Sigma: 0.0020960464
+Beta: 0.2210602236
+N* of test 37
+Fold RMSE 0.0846873178
+----------------------
+Fold 3
+Sigma: 0.0382680158
+Beta: 0.1795237058
+N* of test 36
+Fold RMSE 0.1256343457
+----------------------
+Fold 4
+Sigma: 0.0269102480
+Beta: 0.2258970343
+N* of test 36
+Fold RMSE 0.0679033271
+----------------------
+Fold 5
+Sigma: 0.0296016068
+Beta: 0.1915717861
+N* of test 36
+Fold RMSE 0.0711718404
