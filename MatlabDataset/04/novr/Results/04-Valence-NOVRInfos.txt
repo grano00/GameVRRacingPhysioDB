@@ -1,0 +1,48 @@
+ID: 04
+Name Valence-NOVR
+
+R: 0.9418260007 with p-val of corr 0.000000
+R-square: 0.8870362155
+RMSE: 0.0737409224
+MSE: 0.0054377236
+MAE: 0.0442613627
+N* of Features 8
+N* of instances 379
+
+
+
+ Model Info:
+Gaussian process regression (GPR) model
+PARAMETER:
+KernelFunction: ARDRationalQuadratic
+BasisFunction: Constant
+----------------------
+Fold 1
+Sigma: 0.0083048165
+Beta: 0.5197002801
+N* of test 75
+Fold RMSE 0.0796982217
+----------------------
+Fold 2
+Sigma: 0.0138287188
+Beta: 0.4247133836
+N* of test 76
+Fold RMSE 0.0818513827
+----------------------
+Fold 3
+Sigma: 0.0021824379
+Beta: 0.3886735727
+N* of test 76
+Fold RMSE 0.0710181705
+----------------------
+Fold 4
+Sigma: 0.0459536529
+Beta: 0.4316725154
+N* of test 76
+Fold RMSE 0.0613107483
+----------------------
+Fold 5
+Sigma: 0.0041587450
+Beta: 0.4098081400
+N* of test 76
+Fold RMSE 0.0731204611
