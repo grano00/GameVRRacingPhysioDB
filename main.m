@@ -1,10 +1,5 @@
 %#####################%
 %    GENERAL NOTES    %
-% %
-%#####################%
-%   TO REMEMBER       %
-% - check if it is correct that the labeling sequence is arousal (1)
-% valence (2)
 %######################
 
 %START SETUP! 
@@ -31,9 +26,6 @@ fps = 60;
 dirs = dir(['Data/' directory '/']);
 dirs = dirs(3:end,:); %delete dirs of root and superroot
 
-%dirExclude = {'15','28'};
-%dirExclude = {'18','28','30','39'};
-%dirExclude = {'03','13','15'};
 dirExclude = {'15'};
 
 %Remove the directories that must be excluded
