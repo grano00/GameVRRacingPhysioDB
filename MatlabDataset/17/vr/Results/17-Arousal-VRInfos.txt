@@ -1,0 +1,48 @@
+ID: 17
+Name Arousal-VR
+
+R: 0.9609977813 with p-val of corr 0.000000
+R-square: 0.9235167357
+RMSE: 0.1415968729
+MSE: 0.0200496744
+MAE: 0.0888325384
+N* of Features 4
+N* of instances 347
+
+
+
+ Model Info:
+Gaussian process regression (GPR) model
+PARAMETER:
+KernelFunction: ARDRationalQuadratic
+BasisFunction: Constant
+----------------------
+Fold 1
+Sigma: 0.0284527591
+Beta: 0.2271771830
+N* of test 69
+Fold RMSE 0.1252929458
+----------------------
+Fold 2
+Sigma: 0.0051122131
+Beta: 0.2058326567
+N* of test 70
+Fold RMSE 0.1819735114
+----------------------
+Fold 3
+Sigma: 0.1043005336
+Beta: 0.1714418696
+N* of test 70
+Fold RMSE 0.1063710194
+----------------------
+Fold 4
+Sigma: 0.0764013768
+Beta: 0.1451379026
+N* of test 69
+Fold RMSE 0.1015578556
+----------------------
+Fold 5
+Sigma: 0.0751669979
+Beta: 0.1999695636
+N* of test 69
+Fold RMSE 0.1724649193
