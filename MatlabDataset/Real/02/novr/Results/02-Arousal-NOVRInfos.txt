@@ -1,0 +1,48 @@
+ID: 02
+Name Arousal-NOVR
+
+R: 0.9672982889 with p-val of corr 0.000000
+R-square: 0.9356659798
+RMSE: 0.1120975465
+MSE: 0.0125658599
+MAE: 0.0690936468
+N* of Features 11
+N* of instances 514
+
+
+
+ Model Info:
+Gaussian process regression (GPR) model
+PARAMETER:
+KernelFunction: ARDRationalQuadratic
+BasisFunction: Constant
+----------------------
+Fold 1
+Sigma: 0.0046244202
+Beta: 0.1998498663
+N* of test 102
+Fold RMSE 0.1035848215
+----------------------
+Fold 2
+Sigma: 0.0415646617
+Beta: 0.2331367584
+N* of test 103
+Fold RMSE 0.1076947053
+----------------------
+Fold 3
+Sigma: 0.0351846251
+Beta: 0.2316169972
+N* of test 103
+Fold RMSE 0.1250390149
+----------------------
+Fold 4
+Sigma: 0.0424467380
+Beta: 0.1896717430
+N* of test 103
+Fold RMSE 0.1107391160
+----------------------
+Fold 5
+Sigma: 0.0432723575
+Beta: 0.2306125362
+N* of test 103
+Fold RMSE 0.1121855701

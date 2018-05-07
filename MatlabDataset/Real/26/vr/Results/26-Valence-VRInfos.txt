@@ -1,0 +1,48 @@
+ID: 26
+Name Valence-VR
+
+R: 0.9492661014 with p-val of corr 0.000000
+R-square: 0.9011061313
+RMSE: 0.1129596415
+MSE: 0.0127598806
+MAE: 0.0643974819
+N* of Features 9
+N* of instances 365
+
+
+
+ Model Info:
+Gaussian process regression (GPR) model
+PARAMETER:
+KernelFunction: ARDRationalQuadratic
+BasisFunction: Constant
+----------------------
+Fold 1
+Sigma: 0.0742737601
+Beta: 0.2870369506
+N* of test 73
+Fold RMSE 0.0938864909
+----------------------
+Fold 2
+Sigma: 0.0856150175
+Beta: 0.3395169722
+N* of test 73
+Fold RMSE 0.0939022401
+----------------------
+Fold 3
+Sigma: 0.0991758931
+Beta: 0.3735570412
+N* of test 73
+Fold RMSE 0.1580026995
+----------------------
+Fold 4
+Sigma: 0.0392352441
+Beta: 0.2541258343
+N* of test 73
+Fold RMSE 0.0902750582
+----------------------
+Fold 5
+Sigma: 0.0586481978
+Beta: 0.3604721601
+N* of test 73
+Fold RMSE 0.1142482385
