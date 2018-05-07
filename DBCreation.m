@@ -17,13 +17,13 @@ addpath(genpath('Utility'));
 dirNameDB = 'ReadableDataSet/';
 mkdir(dirNameDB);
 
-load('./MatlabDataset/Examples/tableOfFiles.mat');
+load('./MatlabDataset/Real/tableOfFiles.mat');
 inVR = tableOfFiles.VRInGame;
 noVR = tableOfFiles.NOVRInGame;
 
 for i = 1:length(inVR)
     %Get User ID
-    id = GetNameP(inVr{1},1,2);
+    id = GetNameP(inVR{i},1,2);
     path = [dirNameDB id];
     mkdir(path);
     
@@ -31,7 +31,8 @@ for i = 1:length(inVR)
     load(noVR{i});
     
     %Data of PCs
-    subpath = [path 'PCs/']
+    subpath = [path 'PCs/'];
+    mkdir(subpath);
     [LABEL,PHYSIO,MERGED] = extractInfo(labelData,gamePartsTable.InGame,1);
     save([subpath 'dataset.mat'],'LABEL','PHYSIO','MERGED');
     writetable(LABEL,[subpath 'label.csv'],'Delimiter',',');
@@ -39,7 +40,8 @@ for i = 1:length(inVR)
     writetable(MERGED,[subpath 'physioWithLabeling.csv'],'Delimiter',',');
     
     %Data of RO
-    subpath = [path 'RO/']
+    subpath = [path 'RO/'];
+    mkdir(subpath);
     load(noVR{i});
     [LABEL,PHYSIO,MERGED] = extractInfo(labelData,gamePartsTable.InGame,2);
     save([subpath 'dataset.mat'],'LABEL','PHYSIO','MERGED');
@@ -51,8 +53,10 @@ for i = 1:length(inVR)
     %VR
     load(inVR{i});
     
+    
     %Data of PCs
-    subpath = [path 'PCsInVR/']
+    subpath = [path 'PCsInVR/'];
+    mkdir(subpath);
     [LABEL,PHYSIO,MERGED] = extractInfo(labelData,gamePartsTable.InGame,1);
     save([subpath 'dataset.mat'],'LABEL','PHYSIO','MERGED');
     writetable(LABEL,[subpath 'label.csv'],'Delimiter',',');
@@ -60,7 +64,8 @@ for i = 1:length(inVR)
     writetable(MERGED,[subpath 'physioWithLabeling.csv'],'Delimiter',',');
     
     %Data of RO
-    subpath = [path 'ROInVR/']
+    subpath = [path 'ROInVR/'];
+    mkdir(subpath);
     load(noVR{i});
     [LABEL,PHYSIO,MERGED] = extractInfo(labelData,gamePartsTable.InGame,2);
     save([subpath 'dataset.mat'],'LABEL','PHYSIO','MERGED');
