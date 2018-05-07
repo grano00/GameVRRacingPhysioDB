@@ -1,0 +1,48 @@
+ID: 36
+Name Valence-VRGame1
+
+R: 0.9262892129 with p-val of corr 0.000000
+R-square: 0.8580117060
+RMSE: 0.0658354192
+MSE: 0.0043343024
+MAE: 0.0363595391
+N* of Features 9
+N* of instances 217
+
+
+
+ Model Info:
+Gaussian process regression (GPR) model
+PARAMETER:
+KernelFunction: ARDRationalQuadratic
+BasisFunction: Constant
+----------------------
+Fold 1
+Sigma: 0.0104324542
+Beta: 0.3014407272
+N* of test 43
+Fold RMSE 0.0836550252
+----------------------
+Fold 2
+Sigma: 0.0087628001
+Beta: 0.2863725724
+N* of test 44
+Fold RMSE 0.0636225090
+----------------------
+Fold 3
+Sigma: 0.0549133220
+Beta: 0.3147020301
+N* of test 44
+Fold RMSE 0.0664890794
+----------------------
+Fold 4
+Sigma: 0.0566443862
+Beta: 0.3252550331
+N* of test 43
+Fold RMSE 0.0624135941
+----------------------
+Fold 5
+Sigma: 0.0129412904
+Beta: 0.2974326555
+N* of test 43
+Fold RMSE 0.0481032388

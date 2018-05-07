@@ -1,0 +1,48 @@
+ID: Real
+Name Arousal-Game2
+
+R: 0.9247307681 with p-val of corr 0.000000
+R-square: 0.8551269934
+RMSE: 0.0913632140
+MSE: 0.0083472369
+MAE: 0.0696709202
+N* of Features 7
+N* of instances 371
+
+
+
+ Model Info:
+Gaussian process regression (GPR) model
+PARAMETER:
+KernelFunction: ARDRationalQuadratic
+BasisFunction: Constant
+----------------------
+Fold 1
+Sigma: 0.0436314590
+Beta: 0.2955343557
+N* of test 74
+Fold RMSE 0.0813169596
+----------------------
+Fold 2
+Sigma: 0.0150560465
+Beta: 0.2719930293
+N* of test 75
+Fold RMSE 0.0986902165
+----------------------
+Fold 3
+Sigma: 0.0516837757
+Beta: 0.2912159581
+N* of test 74
+Fold RMSE 0.0792145652
+----------------------
+Fold 4
+Sigma: 0.0023673219
+Beta: 0.2693814452
+N* of test 74
+Fold RMSE 0.0886461350
+----------------------
+Fold 5
+Sigma: 0.0022649966
+Beta: 0.2971875223
+N* of test 74
+Fold RMSE 0.1059814850
