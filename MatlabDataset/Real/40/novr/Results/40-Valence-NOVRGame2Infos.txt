@@ -1,0 +1,48 @@
+ID: 40
+Name Valence-NOVRGame2
+
+R: 0.8453695251 with p-val of corr 0.000000
+R-square: 0.7146496339
+RMSE: 0.2135798858
+MSE: 0.0456163676
+MAE: 0.1375795034
+N* of Features 7
+N* of instances 255
+
+
+
+ Model Info:
+Gaussian process regression (GPR) model
+PARAMETER:
+KernelFunction: ARDRationalQuadratic
+BasisFunction: Constant
+----------------------
+Fold 1
+Sigma: 0.0081023215
+Beta: -0.1200672477
+N* of test 51
+Fold RMSE 0.2271166721
+----------------------
+Fold 2
+Sigma: 0.0061599333
+Beta: -0.1695896084
+N* of test 51
+Fold RMSE 0.2624838123
+----------------------
+Fold 3
+Sigma: 0.0685492044
+Beta: 0.0922574752
+N* of test 51
+Fold RMSE 0.2474577220
+----------------------
+Fold 4
+Sigma: 0.0039995984
+Beta: -0.2069849188
+N* of test 51
+Fold RMSE 0.1585724454
+----------------------
+Fold 5
+Sigma: 0.1199445884
+Beta: -0.1577684596
+N* of test 51
+Fold RMSE 0.1456762131
