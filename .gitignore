@@ -1,10 +1,7 @@
-MatlabDataset/*/*/*/*/*.mat
-MatlabDataset/*/*/*/*.mat
-MatlabDataset/*/*/*.mat
-MatlabDataset/*/*.mat
-MatlabDataset/*.mat
+MatlabDataset/*
 gsrTable*.txt
 *.asv
 *test*
 test*
 *.bk
+Ledalab/*
