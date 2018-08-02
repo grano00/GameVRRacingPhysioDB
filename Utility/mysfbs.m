@@ -1,6 +1,6 @@
-function [ indexes_f, hist_f, err_f, selected_f, cvinfo_f] = mysfbs(X, Y, ...
+function [ indexes_f, hist_f, err_f, selected_f, cvinfo_f] = mysffs(X, Y, ...
     fun, log, niteration,cv,varNames, randomSeed)
-%SFBS Definition of a personal way of SFBS. 
+%SFFS Definition of a personal way of SFFS. 
 %   Parameters are:
 
 %X: Data to elaborate

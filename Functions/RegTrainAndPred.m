@@ -1,6 +1,6 @@
 function [ newTableOfFiles ] = RegTrainAndPred( tableOfFiles,subrootPath )
 %REGTRAINANDPRED This function collect the data with the selected features
-%and train them with a ML Function/10 cv.
+%and train them with a ML Function/5 cv.
 %   The results will be achieved into results subpath. In this folder will
 %   be find the plot and a 4 text file = "*id*(VAL/AROU)TrainData.csv" that
 %   cointains the final data of prediction/target; "*id*(VAL/AROU)Infos.txt" with
@@ -126,7 +126,7 @@ else
         [XA,YA] = restoration(AT);
         [XV,YV] = restoration(VT);
         
-        %CV 10Fold
+        %CV 5Fold
         cva = cvpartition(YA,'kfold',5);
         cvv = cvpartition(YV,'kfold',5);
         

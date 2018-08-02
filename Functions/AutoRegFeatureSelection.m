@@ -153,7 +153,7 @@ log = 1;
 
 disp('Start Arousal at');
 dt = datetime
-[arouSFBSIndexes,arouHist,arouErr,arouSelected,cvArouInfo] = mysfbs( XArou,arousal,fun,...
+[arouSFBSIndexes,arouHist,arouErr,arouSelected,cvArouInfo] = mysffs( XArou,arousal,fun,...
     log,niteration,cva,funVariables,seed);
 disp('End at');
 datetime
@@ -163,7 +163,7 @@ disp(['N of feature selected = ' num2str(sum(arouSFBSIndexes))]);
 disp('-----------');
 disp('Start Valence at');
 dt=datetime
-[valSFBSIndexes,valHist,valErr,valSelected,cvValInfo] = mysfbs( XVal,valence,fun,...
+[valSFBSIndexes,valHist,valErr,valSelected,cvValInfo] = mysffs( XVal,valence,fun,...
     log,niteration,cvv,funVariables,seed);
 disp('End at');
 datetime
@@ -181,7 +181,7 @@ valSFBSIndexes = myBase;
 
 save('testBefFM.mat');
 
-myrownames = {'pval','pindex','sfbsindex'};
+myrownames = {'pval','pindex','sffsindex'};
 
 arousalFeatures = array2table([corrTableArousal;arouCorrIndexes;...
     arouSFBSIndexes],...
@@ -223,7 +223,7 @@ newM{i+1} = emptyMat;
 end
 
 
-%Functions for sfs/sbs/sfbs
+%Functions for sfs/sbs/sffs
 function [err] = myCrossValidation(XT,yT,xt,yt)
 X = [XT;xt];
 Y = [yT;yt];
