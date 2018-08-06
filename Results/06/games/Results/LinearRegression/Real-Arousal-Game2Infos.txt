@@ -1,0 +1,11 @@
+ID: Real
+Name Arousal-Game2
+Function LinearRegression
+
+R: 0.0068967567 with p-val of corr 0.888600
+R-square: 0.0000475653
+RMSE: 0.1009786677
+MSE: 0.0101966913
+MAE: 0.0625405446
+N* of Features 4
+N* of instances 415

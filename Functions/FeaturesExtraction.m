@@ -393,7 +393,7 @@ function [featuresTable] = getFeatures(mydata,before,uniqueData,sr,signaltype)
         %Get the BandPower of the signal. It is the average power in a
         %freq. range. 
 
-        [bands,steps,mymod] = getBandParameters(sr,signaltype);
+        [bands,steps,mymod,lfreq,hfreq] = getBandParameters(sr,signaltype);
         
         mpow = zeros((((bands - mymod) / steps)+1),2);
         k = 1;
@@ -436,7 +436,7 @@ function [featuresTable] = getFeatures(mydata,before,uniqueData,sr,signaltype)
         
         %%%% THIS CODE WAS TAKEN BY THE CITED PAPER.
         %%%% ANYWAY, IT CONSIDER THE CENTER OF THE SIGNAL.
-        %%%% THE MOST IMPORTANT INFORMATION, IN MY PERSONAL STUDY
+        %%%% THE MOST IMPORTANT INFORMATION, IN MY STUDY
         %%%% ARE AT THE END OF THE SIGNAL..
 %        
 %         %Modfied means ABS. At the value will be added the weight 1 if the
@@ -607,7 +607,9 @@ function [featuresTable] = getFeatures(mydata,before,uniqueData,sr,signaltype)
         %Frequency Ratio (FR) distinguish the difference between
         %contraction and relaxation of a muscle in frequency domain, by
         %appling fft 
-        featuresCell{idx} = min(Fy)/max(Fy);
+        highfreq = bandpower(mydata,sr,hfreq);
+        lowfreq = bandpower(mydata,sr,lfreq);
+        featuresCell{idx} = abs(lowfreq)/abs(highfreq);
         %idx = idx + 1;
         
         
@@ -671,6 +673,7 @@ function [zctr, ssctr] = setThreshold(signaltype)
     if(exist('signaltype') > 0 && contains(lower(signaltype),'emg') > 0)
         zctr = 0.5;
         ssctr = 0.5;
+
     elseif (exist('signaltype') > 0 && contains(lower(signaltype),'resp') > 0)
         zctr = 0.05;
         ssctr = 0.005;
@@ -684,24 +687,32 @@ function [zctr, ssctr] = setThreshold(signaltype)
 end        
         
 
-function [bands,step,mymod] = getBandParameters(sr,signaltype)
+function [bands,step,mymod,lfreq,hfreq] = getBandParameters(sr,signaltype)
 
 if(exist('signaltype') > 0 && contains(lower(signaltype),'emg') > 0)
     bands = round(sr/2);
     step = 5;
     mymod = mod(bands,step);
+    lfreq = [20,100];
+    hfreq = [100,bands]; 
 elseif (exist('signaltype') > 0 && contains(lower(signaltype),'resp') > 0)
     bands = 1;
     step = 0.05;
     mymod = 0;
+    lfreq = [0.01, 0.2];
+    hfreq = [0.2, 1];
 elseif (exist('signaltype') > 0 && contains(lower(signaltype),'gsr') > 0)
     bands = 2;
     step = 0.05;
     mymod = 0;
+    lfreq = [0.01, 0.2];
+    hfreq = [0.2, 2];
 else
     bands = round(sr/2);
     step = 5;
     mymod = mod(bands,step);
+        lfreq = [20,100];
+    hfreq = [100,bands];
 end
 
 end

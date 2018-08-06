@@ -1,0 +1,11 @@
+ID: 03
+Name Arousal-VRGame1
+Function BoostTreeRegression
+
+R: 0.8214830693 with p-val of corr 0.000000
+R-square: 0.6748344331
+RMSE: 0.2021602649
+MSE: 0.0408687727
+MAE: 0.1628147415
+N* of Features 5
+N* of instances 187

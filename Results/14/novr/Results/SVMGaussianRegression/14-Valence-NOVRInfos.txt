@@ -1,0 +1,11 @@
+ID: 14
+Name Valence-NOVR
+Function SVMGaussianRegression
+
+R: 0.8525997383 with p-val of corr 0.000000
+R-square: 0.7269263138
+RMSE: 0.1483364816
+MSE: 0.0220037118
+MAE: 0.1030803266
+N* of Features 8
+N* of instances 434

@@ -1,0 +1,11 @@
+ID: Real
+Name Valence-Game2
+Function BoostTreeRegression
+
+R: 0.5296839942 with p-val of corr 0.000000
+R-square: 0.2805651337
+RMSE: 0.3156298437
+MSE: 0.0996221982
+MAE: 0.2193440760
+N* of Features 5
+N* of instances 404

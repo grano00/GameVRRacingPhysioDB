@@ -1,0 +1,11 @@
+ID: 20
+Name Valence-VRGame1
+Function SVMGaussianRegression
+
+R: 0.8702957770 with p-val of corr 0.000000
+R-square: 0.7574147395
+RMSE: 0.1725822925
+MSE: 0.0297846477
+MAE: 0.0985749702
+N* of Features 6
+N* of instances 195

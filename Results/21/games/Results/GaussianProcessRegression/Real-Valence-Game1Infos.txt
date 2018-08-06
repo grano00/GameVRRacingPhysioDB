@@ -1,0 +1,11 @@
+ID: Real
+Name Valence-Game1
+Function GaussianProcessRegression
+
+R: 0.9766177533 with p-val of corr 0.000000
+R-square: 0.9537822360
+RMSE: 0.0627933122
+MSE: 0.0039430001
+MAE: 0.0363745697
+N* of Features 6
+N* of instances 433

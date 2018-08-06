@@ -1,0 +1,11 @@
+ID: 18
+Name Valence-VR
+Function LinearRegression
+
+R: -0.0202615894 with p-val of corr 0.691877
+R-square: 0.0004105320
+RMSE: 0.5723994018
+MSE: 0.3276410752
+MAE: 0.4386839226
+N* of Features 11
+N* of instances 385

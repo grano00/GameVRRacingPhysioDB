@@ -18,6 +18,20 @@ if(strcmp(type,'mergeGame'))
     
     newTableOfFiles.GamesFeaturesSel = newGamesFeaturesTable;
     
+elseif(strcmp(type,'mergePlayer'))
+    
+    disp('Start player game');
+    vrFMatrix = tableOfFiles.VRfeaturesMatrix;
+    novrFMatrix = tableOfFiles.NOVRfeaturesMatrix;
+    vrLabel = tableOfFiles.VRFilteredLabel;
+    novrLabel = tableOfFiles.NOVRFilteredLabel;
+    
+    %In the following function there is a loop where the data will be selected, filtered, resampled, and
+    %restored.
+    [newPlayerFeaturesTable] = FPlayerLoop(vrFMatrix,novrFMatrix,vrLabel, novrLabel);
+    
+    newTableOfFiles.PlayerFeaturesSel = newPlayerFeaturesTable;
+    
 elseif(strcmp(type,'vr'))
     
     disp('Start vr');
@@ -49,6 +63,50 @@ end
 
 end
 
+
+function [newTable] = FPlayerLoop(DataMat1,DataMat2,Label1,Label2)
+
+newTable = cell(size(DataMat1));
+for i = 1:length(newTable)
+    
+    
+    load(DataMat1{i});
+    load(Label1{i});
+    MLMatrixes1 = MLMatrixes;
+    secondLabeling1 = secondLabeling;
+    
+    load(DataMat2{i});
+    load(Label2{i});
+    MLMatrixes2 = MLMatrixes;
+    secondLabeling2 = secondLabeling;
+    
+    disp(['Start user: ' GetNameP(DataMat1{i},2,1)]);
+    
+    TAB1 = [MLMatrixes1{1};MLMatrixes2{1}];
+    TAB2 = [MLMatrixes1{2};MLMatrixes2{2}];
+    LAB1 = [secondLabeling1{1};secondLabeling2{1}];
+    LAB2 = [secondLabeling1{2};secondLabeling2{2}];
+    TAB = [TAB1;TAB2];
+    LAB = [LAB1;LAB2];
+    
+    clear 'secondLabeling1' 'secondLabeling2' 'secondLabeling' ...
+        'MLMatrixes1' 'MLMatrixes2' 'MLMatrixes' 'TAB1' 'TAB2' ...
+        'LAB1' 'LAB2'
+    
+    FeatureMatrix = cell(1,1);
+    
+    disp('Start FS 1/2');
+    FeatureMatrix{1} = FSelection(TAB,LAB);
+    
+    disp('Saving');
+    mypath = [GetPath(GetPath(DataMat1{i})) 'player\'];
+    mkdir(mypath);
+    newTable{i} = [mypath 'PlayerFeatureSel.mat'];
+    save(newTable{i},'FeatureMatrix');
+    
+end
+
+end
 
 function [newTable] = FGameLoop(DataMat1,DataMat2,Label1,Label2)
 
@@ -84,7 +142,8 @@ for i = 1:length(newTable)
     FeatureMatrix{2} = FSelection(TAB2,LAB2);
     
     disp('Saving');
-    newTable{i} = [GetPath(GetPath(DataMat1{i})) 'GamesFeatureSel.mat'];
+    mypath = [GetPath(GetPath(DataMat1{i})) 'games\'];
+    newTable{i} = [mypath 'GamesFeatureSel.mat'];
     save(newTable{i},'FeatureMatrix');
     
 end
@@ -181,7 +240,7 @@ valSFBSIndexes = myBase;
 
 save('testBefFM.mat');
 
-myrownames = {'pval','pindex','sffsindex'};
+myrownames = {'pval','pindex','sfbsindex'};
 
 arousalFeatures = array2table([corrTableArousal;arouCorrIndexes;...
     arouSFBSIndexes],...
@@ -223,7 +282,7 @@ newM{i+1} = emptyMat;
 end
 
 
-%Functions for sfs/sbs/sffs
+%Functions for sfs/sbs/sfbs
 function [err] = myCrossValidation(XT,yT,xt,yt)
 X = [XT;xt];
 Y = [yT;yt];

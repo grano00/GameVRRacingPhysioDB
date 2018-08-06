@@ -1,0 +1,11 @@
+ID: 31
+Name Valence-VRGame1
+Function RandomForestRegression
+
+R: 0.8264643943 with p-val of corr 0.000000
+R-square: 0.6830433950
+RMSE: 0.1892489747
+MSE: 0.0358151744
+MAE: 0.1350367371
+N* of Features 7
+N* of instances 187

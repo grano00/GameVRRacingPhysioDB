@@ -1,0 +1,11 @@
+ID: 33
+Name Arousal-VR
+Function BoostTreeRegression
+
+R: 0.7842216335 with p-val of corr 0.000000
+R-square: 0.6150035705
+RMSE: 0.1898448133
+MSE: 0.0360410531
+MAE: 0.1494724179
+N* of Features 11
+N* of instances 442

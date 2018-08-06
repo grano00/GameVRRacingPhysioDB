@@ -1,0 +1,11 @@
+ID: 30
+Name Valence-VRGame2
+Function SVMLinearRegression
+
+R: 0.3210277215 with p-val of corr 0.000003
+R-square: 0.1030587980
+RMSE: 0.2845102731
+MSE: 0.0809460955
+MAE: 0.1990179543
+N* of Features 6
+N* of instances 206

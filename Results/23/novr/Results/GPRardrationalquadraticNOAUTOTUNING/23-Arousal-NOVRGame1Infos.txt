@@ -1,0 +1,11 @@
+ID: 23
+Name Arousal-NOVRGame1
+Function GPRardrationalquadraticNOAUTOTUNING
+
+R: 0.9493366469 with p-val of corr 0.000000
+R-square: 0.9012400692
+RMSE: 0.0970195104
+MSE: 0.0094127854
+MAE: 0.0662606253
+N* of Features 5
+N* of instances 290

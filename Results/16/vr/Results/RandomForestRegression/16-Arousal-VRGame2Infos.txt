@@ -1,0 +1,11 @@
+ID: 16
+Name Arousal-VRGame2
+Function RandomForestRegression
+
+R: 0.7991074971 with p-val of corr 0.000000
+R-square: 0.6385727919
+RMSE: 0.1046777919
+MSE: 0.0109574401
+MAE: 0.0441533865
+N* of Features 6
+N* of instances 191

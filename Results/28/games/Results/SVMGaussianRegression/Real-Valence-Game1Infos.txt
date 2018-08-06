@@ -1,0 +1,11 @@
+ID: Real
+Name Valence-Game1
+Function SVMGaussianRegression
+
+R: 0.6694800553 with p-val of corr 0.000000
+R-square: 0.4482035444
+RMSE: 0.3408748128
+MSE: 0.1161956380
+MAE: 0.2424958309
+N* of Features 9
+N* of instances 633

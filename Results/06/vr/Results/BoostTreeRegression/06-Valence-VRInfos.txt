@@ -1,0 +1,11 @@
+ID: 06
+Name Valence-VR
+Function BoostTreeRegression
+
+R: 0.9212408418 with p-val of corr 0.000000
+R-square: 0.8486846886
+RMSE: 0.1701183387
+MSE: 0.0289402492
+MAE: 0.1254048413
+N* of Features 11
+N* of instances 472

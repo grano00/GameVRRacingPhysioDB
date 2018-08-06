@@ -1,0 +1,11 @@
+ID: 23
+Name Valence-VR
+Function RandomForestRegression
+
+R: 0.8373832868 with p-val of corr 0.000000
+R-square: 0.7012107691
+RMSE: 0.2327364018
+MSE: 0.0541662327
+MAE: 0.1563786311
+N* of Features 14
+N* of instances 855

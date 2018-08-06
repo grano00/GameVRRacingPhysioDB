@@ -1,0 +1,11 @@
+ID: 23
+Name Arousal-NOVRGame1
+Function GaussianProcessRegression
+
+R: 0.9553431588 with p-val of corr 0.000000
+R-square: 0.9126805511
+RMSE: 0.0911978490
+MSE: 0.0083170477
+MAE: 0.0625075259
+N* of Features 5
+N* of instances 290

@@ -1,0 +1,11 @@
+ID: 38
+Name Valence-NOVR
+Function BoostTreeRegression
+
+R: 0.8738734474 with p-val of corr 0.000000
+R-square: 0.7636548021
+RMSE: 0.1537797742
+MSE: 0.0236482189
+MAE: 0.1216852669
+N* of Features 8
+N* of instances 372

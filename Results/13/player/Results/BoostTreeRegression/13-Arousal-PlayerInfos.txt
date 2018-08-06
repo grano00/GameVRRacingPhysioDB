@@ -1,0 +1,11 @@
+ID: 13
+Name Arousal-Player
+Function BoostTreeRegression
+
+R: 0.6172115573 with p-val of corr 0.000000
+R-square: 0.3809501065
+RMSE: 0.2398259482
+MSE: 0.0575164854
+MAE: 0.1856287930
+N* of Features 11
+N* of instances 789

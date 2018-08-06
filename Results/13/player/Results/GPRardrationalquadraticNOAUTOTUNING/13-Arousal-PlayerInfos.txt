@@ -1,0 +1,11 @@
+ID: 13
+Name Arousal-Player
+Function GPRardrationalquadraticNOAUTOTUNING
+
+R: 0.8783790539 with p-val of corr 0.000000
+R-square: 0.7715497623
+RMSE: 0.1493562972
+MSE: 0.0223073035
+MAE: 0.1003455169
+N* of Features 11
+N* of instances 789

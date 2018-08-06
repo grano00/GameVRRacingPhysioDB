@@ -1,0 +1,11 @@
+ID: 06
+Name Valence-Game2
+Function GPRardrationalquadraticNOAUTOTUNING
+
+R: 0.8598459286 with p-val of corr 0.000000
+R-square: 0.7393350210
+RMSE: 0.1744540052
+MSE: 0.0304341999
+MAE: 0.1025913170
+N* of Features 8
+N* of instances 415

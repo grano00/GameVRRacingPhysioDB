@@ -1,0 +1,11 @@
+ID: 05
+Name Arousal-Game1
+Function GPRardrationalquadraticNOAUTOTUNING
+
+R: 0.8558087186 with p-val of corr 0.000000
+R-square: 0.7324085628
+RMSE: 0.1257843314
+MSE: 0.0158216980
+MAE: 0.0770320076
+N* of Features 4
+N* of instances 428

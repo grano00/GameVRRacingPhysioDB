@@ -1,0 +1,11 @@
+ID: 16
+Name Valence-NOVRGame2
+Function LinearRegression
+
+R: 0.0813698626 with p-val of corr 0.269555
+R-square: 0.0066210545
+RMSE: 0.1810135813
+MSE: 0.0327659166
+MAE: 0.1188636844
+N* of Features 2
+N* of instances 186

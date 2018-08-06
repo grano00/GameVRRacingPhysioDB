@@ -1,0 +1,11 @@
+ID: Real
+Name Valence-Game2
+Function RandomForestRegression
+
+R: 0.8805008178 with p-val of corr 0.000000
+R-square: 0.7752816902
+RMSE: 0.1824249863
+MSE: 0.0332788756
+MAE: 0.1230816626
+N* of Features 10
+N* of instances 423

@@ -1,0 +1,11 @@
+ID: 40
+Name Arousal-NOVRGame1
+Function SVMGaussianRegression
+
+R: 0.5142634491 with p-val of corr 0.000000
+R-square: 0.2644668951
+RMSE: 0.3399834208
+MSE: 0.1155887264
+MAE: 0.2616516416
+N* of Features 6
+N* of instances 365

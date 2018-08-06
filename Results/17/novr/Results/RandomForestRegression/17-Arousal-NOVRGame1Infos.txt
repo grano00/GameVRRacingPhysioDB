@@ -1,0 +1,11 @@
+ID: 17
+Name Arousal-NOVRGame1
+Function RandomForestRegression
+
+R: 0.9338941520 with p-val of corr 0.000000
+R-square: 0.8721582871
+RMSE: 0.1576576496
+MSE: 0.0248559345
+MAE: 0.1079231952
+N* of Features 6
+N* of instances 183

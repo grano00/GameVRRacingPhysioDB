@@ -1,0 +1,11 @@
+ID: 13
+Name Valence-NOVRGame1
+Function GaussianProcessRegression
+
+R: 0.7162617019 with p-val of corr 0.000000
+R-square: 0.5130308257
+RMSE: 0.4111586469
+MSE: 0.1690514329
+MAE: 0.3207776578
+N* of Features 5
+N* of instances 209

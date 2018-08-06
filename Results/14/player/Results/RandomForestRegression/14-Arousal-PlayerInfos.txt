@@ -1,0 +1,11 @@
+ID: 14
+Name Arousal-Player
+Function RandomForestRegression
+
+R: 0.9389153249 with p-val of corr 0.000000
+R-square: 0.8815619873
+RMSE: 0.0919064021
+MSE: 0.0084467867
+MAE: 0.0636365412
+N* of Features 8
+N* of instances 1007

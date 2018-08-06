@@ -1,0 +1,11 @@
+ID: 18
+Name Valence-NOVRGame1
+Function GPRardrationalquadraticNOAUTOTUNING
+
+R: 0.7808189410 with p-val of corr 0.000000
+R-square: 0.6096782186
+RMSE: 0.1605034512
+MSE: 0.0257613578
+MAE: 0.0770012442
+N* of Features 5
+N* of instances 184

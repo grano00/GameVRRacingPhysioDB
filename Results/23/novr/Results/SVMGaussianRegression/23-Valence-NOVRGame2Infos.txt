@@ -1,0 +1,11 @@
+ID: 23
+Name Valence-NOVRGame2
+Function SVMGaussianRegression
+
+R: 0.7734595467 with p-val of corr 0.000000
+R-square: 0.5982396704
+RMSE: 0.3226471782
+MSE: 0.1041012016
+MAE: 0.2131839335
+N* of Features 9
+N* of instances 202

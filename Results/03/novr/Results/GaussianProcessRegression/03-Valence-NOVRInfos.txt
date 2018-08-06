@@ -1,0 +1,11 @@
+ID: 03
+Name Valence-NOVR
+Function GaussianProcessRegression
+
+R: 0.9729337441 with p-val of corr 0.000000
+R-square: 0.9466000705
+RMSE: 0.0972580689
+MSE: 0.0094591320
+MAE: 0.0540489465
+N* of Features 9
+N* of instances 430

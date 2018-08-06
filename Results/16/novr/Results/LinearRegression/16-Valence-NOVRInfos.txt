@@ -1,0 +1,11 @@
+ID: 16
+Name Valence-NOVR
+Function LinearRegression
+
+R: 0.0043204666 with p-val of corr 0.933278
+R-square: 0.0000186664
+RMSE: 0.2723420727
+MSE: 0.0741702046
+MAE: 0.2139630041
+N* of Features 5
+N* of instances 378

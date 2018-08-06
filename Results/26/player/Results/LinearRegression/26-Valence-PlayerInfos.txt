@@ -1,0 +1,11 @@
+ID: 26
+Name Valence-Player
+Function LinearRegression
+
+R: 0.2434668806 with p-val of corr 0.000000
+R-square: 0.0592761220
+RMSE: 0.3596940637
+MSE: 0.1293798194
+MAE: 0.2935508985
+N* of Features 11
+N* of instances 721

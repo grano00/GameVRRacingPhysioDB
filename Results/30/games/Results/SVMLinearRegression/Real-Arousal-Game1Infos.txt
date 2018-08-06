@@ -1,0 +1,11 @@
+ID: Real
+Name Arousal-Game1
+Function SVMLinearRegression
+
+R: 0.8432704414 with p-val of corr 0.000000
+R-square: 0.7111050373
+RMSE: 0.2068729925
+MSE: 0.0427964350
+MAE: 0.1393652280
+N* of Features 7
+N* of instances 432

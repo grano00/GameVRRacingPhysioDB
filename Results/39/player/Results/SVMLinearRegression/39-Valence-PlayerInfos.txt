@@ -1,0 +1,11 @@
+ID: 39
+Name Valence-Player
+Function SVMLinearRegression
+
+R: 0.4700458428 with p-val of corr 0.000000
+R-square: 0.2209430943
+RMSE: 0.3658675690
+MSE: 0.1338590781
+MAE: 0.2894273514
+N* of Features 8
+N* of instances 849

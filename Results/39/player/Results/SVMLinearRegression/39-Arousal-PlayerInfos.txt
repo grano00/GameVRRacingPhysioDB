@@ -1,0 +1,11 @@
+ID: 39
+Name Arousal-Player
+Function SVMLinearRegression
+
+R: 0.3726891653 with p-val of corr 0.000000
+R-square: 0.1388972139
+RMSE: 0.4432098918
+MSE: 0.1964350082
+MAE: 0.3046746794
+N* of Features 9
+N* of instances 849

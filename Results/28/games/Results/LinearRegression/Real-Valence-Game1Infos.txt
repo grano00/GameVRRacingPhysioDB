@@ -1,0 +1,11 @@
+ID: Real
+Name Valence-Game1
+Function LinearRegression
+
+R: 0.2366907393 with p-val of corr 0.000000
+R-square: 0.0560225061
+RMSE: 0.4712971806
+MSE: 0.2221210324
+MAE: 0.3923140841
+N* of Features 9
+N* of instances 633

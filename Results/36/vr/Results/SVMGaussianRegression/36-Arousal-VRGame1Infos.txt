@@ -1,0 +1,11 @@
+ID: 36
+Name Arousal-VRGame1
+Function SVMGaussianRegression
+
+R: 0.8428370717 with p-val of corr 0.000000
+R-square: 0.7103743294
+RMSE: 0.2027816450
+MSE: 0.0411203956
+MAE: 0.1424407802
+N* of Features 9
+N* of instances 217

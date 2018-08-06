@@ -1,0 +1,11 @@
+ID: 20
+Name Valence-VRGame1
+Function GPRardrationalquadraticNOAUTOTUNING
+
+R: 0.8616056807 with p-val of corr 0.000000
+R-square: 0.7423643491
+RMSE: 0.1705802051
+MSE: 0.0290976064
+MAE: 0.0990687715
+N* of Features 6
+N* of instances 195

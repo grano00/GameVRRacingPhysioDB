@@ -1,6 +1,6 @@
-function [ newTableOfFiles ] = RegTrainAndPred( tableOfFiles,subrootPath )
+function [ newTableOfFiles ] = RegTrainAndPred( tableOfFiles,subrootPath,myfun,myfunName)
 %REGTRAINANDPRED This function collect the data with the selected features
-%and train them with a ML Function/5 cv.
+%and train them with a ML Function/10 cv.
 %   The results will be achieved into results subpath. In this folder will
 %   be find the plot and a 4 text file = "*id*(VAL/AROU)TrainData.csv" that
 %   cointains the final data of prediction/target; "*id*(VAL/AROU)Infos.txt" with
@@ -25,18 +25,22 @@ warning('off',mywarning)
 
 %In the following function there is a loop where the data will be selected,
 %filtered, resampled, and restored.
+
 [newTableOfFiles.VRbyUserResults,arouTab1,valTab1]= ...
-    TrainLoop(tableOfFiles.VRFeaturesSel,{'VRGame1','VRGame2','VR'});
+    TrainLoop(tableOfFiles.VRFeaturesSel,{'VRGame1','VRGame2','VR'},myfun,myfunName);
 [newTableOfFiles.NOVRbyUserResults,arouTab2,valTab2] = ...
-    TrainLoop(tableOfFiles.NOVRFeaturesSel,{'NOVRGame1','NOVRGame2','NOVR'});
+    TrainLoop(tableOfFiles.NOVRFeaturesSel,{'NOVRGame1','NOVRGame2','NOVR'},myfun,myfunName);
 [newTableOfFiles.GAMESbyUserResults,arouTab3,valTab3] = ...
-    TrainLoop(tableOfFiles.GamesFeaturesSel,{'Game1','Game2'});
+    TrainLoop(tableOfFiles.GamesFeaturesSel,{'Game1','Game2'},myfun,myfunName);
+[newTableOfFiles.PLAYERbyUserResults,arouTab4,valTab4] = ...
+    TrainLoop(tableOfFiles.PlayerFeaturesSel,{'Player'},myfun,myfunName);
+
 
 warning('on',mywarning)
 
 fun = @collapse;
-ArousalIndexes = varfun(fun,[arouTab1,arouTab2,arouTab3]);
-ValenceIndexes = varfun(fun,[valTab1,valTab2,valTab3]);
+ArousalIndexes = varfun(fun,[arouTab1,arouTab2,arouTab3,arouTab4]);
+ValenceIndexes = varfun(fun,[valTab1,valTab2,valTab3,valTab4]);
 
 save([subrootPath 'FinalIndexes.mat'],'ArousalIndexes','ValenceIndexes');
 
@@ -44,11 +48,12 @@ plotBar(ArousalIndexes,subrootPath,'arousal');
 plotBar(ValenceIndexes,subrootPath,'valence');
 
 
-
+disp('Create boxplot and excel files');
+produceResults(newTableOfFiles,subrootPath,myfunName);
 
 end
 
-function [results,arouIndex,valIndex] = TrainLoop(mylist,names)
+function [results,arouIndex,valIndex] = TrainLoop(mylist,names,myfun,myfunName)
 results = cell(size(mylist));
 
 
@@ -60,9 +65,11 @@ valIndex = cell(length(mylist),length(FeatureMatrix));
 
 clearvars FeatureMatrix
 
+
 for i = 1:length(mylist)
+%parfor i = 1:length(mylist)
     [results{i},arouIndex(i,:),valIndex(i,:)] = ...
-        MyTraining(mylist{i},names);
+        MyTraining(mylist{i},names,myfun,myfunName);
 end
 
 arouIndex = cell2table(arouIndex,'VariableNames',names);
@@ -71,14 +78,14 @@ valIndex = cell2table(valIndex,'VariableNames',names);
 
 end
 
-function [npath,arouIndexes,valIndexes] = MyTraining(data,names)
+function [npath,arouIndexes,valIndexes] = MyTraining(data,names,myfun,myfunName)
 
 load(data);
 
 id = GetNameP(data,1,2);
 id(end)  = [];
 
-rpath = [GetPath(data) 'Results\'];
+rpath = [GetPath(data) 'Results\' myfunName '\'];
 mkdir(rpath);
 
 if(length(names) ~= length(FeatureMatrix))
@@ -93,11 +100,11 @@ res = cell(1,length(FeatureMatrix));
 
 properties = GetProperties();
 cellarray = cell(size(FeatureMatrix));
-if(exist([GetPath(data) 'RegResults.mat']) > 0 && ...
+if(exist([GetPath(data) myfunName 'RegResults.mat']) > 0 && ...
         properties.rewrite == false)
     disp([id ' was already done']);
-    npath = [GetPath(data) 'RegResults.mat'];
-    for i=1:length(FeatureMatrix)
+    npath = [GetPath(data) myfunName 'RegResults.mat'];
+    parfor i=1:length(FeatureMatrix)
         content = FeatureMatrix{i};
         
         
@@ -107,6 +114,7 @@ if(exist([GetPath(data) 'RegResults.mat']) > 0 && ...
     end
 else
     for i=1:length(FeatureMatrix)
+   % parfor i=1:length(FeatureMatrix)
         content = FeatureMatrix{i};
         
         
@@ -126,13 +134,12 @@ else
         [XA,YA] = restoration(AT);
         [XV,YV] = restoration(VT);
         
-        %CV 5Fold
+        %CV 10Fold
         cva = cvpartition(YA,'kfold',5);
         cvv = cvpartition(YV,'kfold',5);
         
         %ML Function
-        %fun = @myRandomForestRegressionErr;
-        fun = @myGaussianProcessRegression;
+        fun = myfun;
         
         %Define the parallel methods
         opts = statset('UseParallel',true);
@@ -149,27 +156,29 @@ else
             'partition',cvv,'Options',opts);
         dt3 = datetime;
         
-        arousal.trainTime = seconds(dt2-dt1);
-        valence.trainTime = seconds(dt3-dt2);
-        
+        arousal.overallTime = seconds(dt2-dt1);
+        valence.overallTime = seconds(dt3-dt2);
+       
         %Transofrm in table
-        funVariables = {'Err' 'Pred' 'TrainY' 'TrainX' 'TestY' 'TestX' 'Fun'};
+        funVariables = {'Err' 'Pred' 'TrainY' 'TrainX' 'TestY' 'TestX' 'Fun','TrainTime','PredTime'};
         RA = cell2table(RA,'VariableNames',funVariables);
         RV = cell2table(RV,'VariableNames',funVariables);
         
+        
+        
         %Get the info of the CV
-        [arousal.pval,arousal.r,arousal.rmse,...
-            arousal.mse,arousal.mae,...
+        [arousal.pval,arousal.r,arousal.rmse,arousal.nrmse,...
+            arousal.mse,arousal.mae,arousal.snr,...
             arousal.pred,arousal.testy, arousal.ML] = extractInfo(RA,cva);
-        [valence.pval,valence.r,valence.rmse,...
-            valence.mse,valence.mae,...
+        [valence.pval,valence.r,valence.rmse,valence.nrmse,...
+            valence.mse,valence.mae,valence.snr,...
             valence.pred,valence.testy, valence.ML] = extractInfo(RV,cvv);
         
         %Prepare and Plot the data
         DrawPlotAndResults(arousal,rpath,id,'AROU','arousal',...
-            ['Arousal-' names{i}],{[0.5,0,0],[0.9,0,0]})
+            ['Arousal-' names{i}],{[0.5,0,0],[0.9,0,0]},myfunName)
         DrawPlotAndResults(valence,rpath,id,'VAL','valence',...
-            ['Valence-' names{i}],{[0,0.5,0],[0,0.9,0]})
+            ['Valence-' names{i}],{[0,0.5,0],[0,0.9,0]},myfunName)
         
         
         result = content;
@@ -179,14 +188,14 @@ else
         
     end
     Results = cell2table(res,'VariableNames',names);
-    npath = [GetPath(data) 'RegResults.mat'];
+    npath = [GetPath(data) myfunName 'RegResults.mat'];
     save(npath, 'Results');
     
 end
 end
 
 function [] = DrawPlotAndResults(mystruct,path,id,type,...
-    ylab,plotName,colors)
+    ylab,plotName,colors,myfunName)
 
 properties = GetProperties();
 
@@ -201,7 +210,7 @@ if(properties.savePlots)
     hold on
     plot(mystruct.pred,'o','color',colors{2});
     plot(mystruct.pred,'+','color',colors{2});
-    title([id ' ' plotName]);
+    title([id ' ' plotName ' of ' myfunName]);
     xlabel('s');
     ylabel(ylab);
     
@@ -227,7 +236,8 @@ warning('on',mywar);
 
 fileID = fopen([path id '-' plotName 'Infos.txt'],'w');
 fprintf(fileID,'ID: %s\n',id);
-fprintf(fileID,'Name %s\n\n',plotName);
+fprintf(fileID,'Name %s\n',plotName);
+fprintf(fileID,'Function %s\n\n',myfunName);
 fprintf(fileID,'R: %2.10f with p-val of corr %2.6f\n',...
     mystruct.r,mystruct.pval);
 rsquare = mystruct.r^2;
@@ -235,34 +245,38 @@ fprintf(fileID,'R-square: %2.10f\n',rsquare);
 fprintf(fileID,'RMSE: %2.10f\n',mystruct.rmse);
 fprintf(fileID,'MSE: %2.10f\n',mystruct.mse);
 fprintf(fileID,'MAE: %2.10f\n',mystruct.mae);
+
 MLTab = mystruct.ML;
 funs = MLTab.Fun;
 err = MLTab.Err;
 test = funs{1};
-[~,C] = size(test.X);
+xtest = MLTab.TestX{1};
+[~,C] = size(xtest);
 [R,~] = size(MLTab.TestIdx{1});
 fprintf(fileID,'N* of Features %i\n',C);
 fprintf(fileID,'N* of instances %i\n',R);
-fprintf(fileID,'\n\n\n Model Info:\nGaussian process regression (GPR) model\n');
-fprintf(fileID,'PARAMETER:\n');
-fprintf(fileID,'KernelFunction: %s\n',test.KernelFunction);
-fprintf(fileID,'BasisFunction: %s\n',test.BasisFunction);
 
-for i=1:length(funs)
-    mymodel = funs{i};
-    [R,~] = size(mystruct.ML.TestX{i});
-    fprintf(fileID,'----------------------\n');
-    fprintf(fileID,'Fold %i\nSigma: %2.10f\n',i,mymodel.Sigma);
-    fprintf(fileID,'Beta: %2.10f\n',mymodel.Beta);
-    fprintf(fileID,'N* of test %i\n',R);
-    fprintf(fileID,'Fold RMSE %2.10f\n',err(i));
-end
+%INFORMATIONS OF GAUSSIAN MODEL ONLY
+% fprintf(fileID,'\n\n\n Model Info:\nGaussian process regression (GPR) model\n');
+% fprintf(fileID,'PARAMETER:\n');
+% fprintf(fileID,'KernelFunction: %s\n',test.KernelFunction);
+% fprintf(fileID,'BasisFunction: %s\n',test.BasisFunction);
+% 
+% for i=1:length(funs)
+%     mymodel = funs{i};
+%     [R,~] = size(mystruct.ML.TestX{i});
+%     fprintf(fileID,'----------------------\n');
+%     fprintf(fileID,'Fold %i\nSigma: %2.10f\n',i,mymodel.Sigma);
+%     fprintf(fileID,'Beta: %2.10f\n',mymodel.Beta);
+%     fprintf(fileID,'N* of test %i\n',R);
+%     fprintf(fileID,'Fold RMSE %2.10f\n',err(i));
+% end
 fclose(fileID);
 
 
 end
 
-function [pval,r,rmse,mymse,mymae,pred,testy,R] = extractInfo(R,cv)
+function [pval,r,rmse,nrmse,mymse,mymae,mysnr,pred,testy,R] = extractInfo(R,cv)
 y = R.TestY;
 pr = R.Pred;
 
@@ -279,8 +293,10 @@ end
 
 R.TestIdx = idx;
 rmse = RMSE(pred,testy);
+nrmse = rmse / (max(testy) - min(testy));
 mymse = mse(pred,testy);
 mymae = mae(pred,testy);
+mysnr = snr(testy,pred);
 [r,pval] = corrcoef(pred,testy);
 r = r(1,2);
 pval = pval(1,2);
@@ -305,23 +321,8 @@ end
 end
 
 
-function [ret] = myGaussianProcessRegression(XT,yT,xt,yt)
-ops = struct('UseParallel',true);
-md = fitrgp(XT,yT,'KernelFunction','ardrationalquadratic',...
-    'OptimizeHyperparameters','auto');
-%'HyperparameterOptimizationOptions',ops);
-pr = predict(md,xt);
-err = sqrt(immse(yt,pr));
-ret = {err,pr,yT,XT,yt,xt,md};
-end
 
-function [ret] = myRandomForestRegressionErr(XT,yT,xt,yt)
-ops = statset('UseParallel',true);
-tb = TreeBagger(128,XT,yT,'Method','regression','Options',ops);
-pr = predict(tb,xt);
-err = sqrt(immse(yt,pr));
-ret = {err,pr,yT,XT,yt,xt,tb};
-end
+
 
 function [xxx] = collapse(x)
 xx = table();

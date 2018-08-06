@@ -1,0 +1,11 @@
+ID: 21
+Name Arousal-NOVRGame2
+Function BoostTreeRegression
+
+R: 0.8685885797 with p-val of corr 0.000000
+R-square: 0.7544461208
+RMSE: 0.1039865499
+MSE: 0.0108132026
+MAE: 0.0763362114
+N* of Features 7
+N* of instances 181

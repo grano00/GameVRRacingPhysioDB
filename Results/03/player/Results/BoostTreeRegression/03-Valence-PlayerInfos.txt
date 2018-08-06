@@ -1,0 +1,11 @@
+ID: 03
+Name Valence-Player
+Function BoostTreeRegression
+
+R: 0.7572232614 with p-val of corr 0.000000
+R-square: 0.5733870677
+RMSE: 0.2732530428
+MSE: 0.0746672254
+MAE: 0.2104097620
+N* of Features 8
+N* of instances 795

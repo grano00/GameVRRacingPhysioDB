@@ -1,0 +1,11 @@
+ID: 19
+Name Valence-Player
+Function GPRardrationalquadraticNOAUTOTUNING
+
+R: 0.8783451156 with p-val of corr 0.000000
+R-square: 0.7714901421
+RMSE: 0.1788381777
+MSE: 0.0319830938
+MAE: 0.1104529031
+N* of Features 10
+N* of instances 874

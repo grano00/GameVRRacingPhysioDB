@@ -1,0 +1,11 @@
+ID: 08
+Name Valence-NOVRGame1
+Function BoostTreeRegression
+
+R: 0.8773606609 with p-val of corr 0.000000
+R-square: 0.7697617293
+RMSE: 0.2603628826
+MSE: 0.0677888306
+MAE: 0.2062980236
+N* of Features 6
+N* of instances 262

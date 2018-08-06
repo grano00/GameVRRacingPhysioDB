@@ -1,0 +1,11 @@
+ID: 28
+Name Valence-Player
+Function GaussianProcessRegression
+
+R: 0.9469875207 with p-val of corr 0.000000
+R-square: 0.8967853643
+RMSE: 0.1737266033
+MSE: 0.0301809327
+MAE: 0.1093300004
+N* of Features 12
+N* of instances 993

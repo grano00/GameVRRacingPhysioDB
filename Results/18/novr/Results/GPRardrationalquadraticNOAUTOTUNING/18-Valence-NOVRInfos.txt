@@ -1,0 +1,11 @@
+ID: 18
+Name Valence-NOVR
+Function GPRardrationalquadraticNOAUTOTUNING
+
+R: 0.9673612115 with p-val of corr 0.000000
+R-square: 0.9357877136
+RMSE: 0.1694148488
+MSE: 0.0287013910
+MAE: 0.1061339205
+N* of Features 10
+N* of instances 359

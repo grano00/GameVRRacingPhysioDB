@@ -1,0 +1,11 @@
+ID: 31
+Name Valence-VR
+Function SVMLinearRegression
+
+R: 0.4243175070 with p-val of corr 0.000000
+R-square: 0.1800453467
+RMSE: 0.2783109217
+MSE: 0.0774569692
+MAE: 0.1987705956
+N* of Features 7
+N* of instances 391

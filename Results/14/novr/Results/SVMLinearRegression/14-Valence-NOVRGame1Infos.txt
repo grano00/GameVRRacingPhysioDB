@@ -1,0 +1,11 @@
+ID: 14
+Name Valence-NOVRGame1
+Function SVMLinearRegression
+
+R: 0.6742489681 with p-val of corr 0.000000
+R-square: 0.4546116710
+RMSE: 0.1786986234
+MSE: 0.0319331980
+MAE: 0.1364445986
+N* of Features 8
+N* of instances 250

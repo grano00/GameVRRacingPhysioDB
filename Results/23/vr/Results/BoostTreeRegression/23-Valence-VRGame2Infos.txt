@@ -1,0 +1,11 @@
+ID: 23
+Name Valence-VRGame2
+Function BoostTreeRegression
+
+R: 0.7575180011 with p-val of corr 0.000000
+R-square: 0.5738335220
+RMSE: 0.1935782725
+MSE: 0.0374725476
+MAE: 0.1368038278
+N* of Features 5
+N* of instances 523

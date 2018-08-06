@@ -1,0 +1,11 @@
+ID: 34
+Name Arousal-NOVRGame2
+Function LinearRegression
+
+R: 0.1295842995 with p-val of corr 0.087420
+R-square: 0.0167920907
+RMSE: 0.1935835255
+MSE: 0.0374745813
+MAE: 0.1346567991
+N* of Features 5
+N* of instances 175

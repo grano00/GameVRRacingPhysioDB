@@ -1,0 +1,11 @@
+ID: 26
+Name Valence-Player
+Function SVMGaussianRegression
+
+R: 0.5023201565 with p-val of corr 0.000000
+R-square: 0.2523255397
+RMSE: 0.3166157412
+MSE: 0.1002455276
+MAE: 0.2173052007
+N* of Features 11
+N* of instances 721

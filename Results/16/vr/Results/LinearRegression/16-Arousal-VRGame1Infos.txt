@@ -1,0 +1,11 @@
+ID: 16
+Name Arousal-VRGame1
+Function LinearRegression
+
+R: 0.6547021588 with p-val of corr 0.000000
+R-square: 0.4286349167
+RMSE: 0.1646225376
+MSE: 0.0271005799
+MAE: 0.1188860941
+N* of Features 4
+N* of instances 196

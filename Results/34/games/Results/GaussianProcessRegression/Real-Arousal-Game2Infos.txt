@@ -1,0 +1,11 @@
+ID: Real
+Name Arousal-Game2
+Function GaussianProcessRegression
+
+R: 0.9173697025 with p-val of corr 0.000000
+R-square: 0.8415671711
+RMSE: 0.1149649617
+MSE: 0.0132169424
+MAE: 0.0726314603
+N* of Features 5
+N* of instances 367

@@ -1,0 +1,11 @@
+ID: 36
+Name Valence-NOVR
+Function RandomForestRegression
+
+R: 0.9490273721 with p-val of corr 0.000000
+R-square: 0.9006529529
+RMSE: 0.1465146066
+MSE: 0.0214665299
+MAE: 0.1079977710
+N* of Features 6
+N* of instances 391

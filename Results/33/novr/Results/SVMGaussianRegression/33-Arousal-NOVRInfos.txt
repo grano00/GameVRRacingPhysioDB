@@ -1,0 +1,11 @@
+ID: 33
+Name Arousal-NOVR
+Function SVMGaussianRegression
+
+R: 0.4603593656 with p-val of corr 0.000000
+R-square: 0.2119307455
+RMSE: 0.3586237537
+MSE: 0.1286109967
+MAE: 0.2801614954
+N* of Features 11
+N* of instances 510

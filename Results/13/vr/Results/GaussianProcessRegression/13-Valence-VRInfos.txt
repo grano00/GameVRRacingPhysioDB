@@ -1,0 +1,11 @@
+ID: 13
+Name Valence-VR
+Function GaussianProcessRegression
+
+R: 0.9688542894 with p-val of corr 0.000000
+R-square: 0.9386786340
+RMSE: 0.1493187969
+MSE: 0.0222961031
+MAE: 0.1008417664
+N* of Features 8
+N* of instances 398

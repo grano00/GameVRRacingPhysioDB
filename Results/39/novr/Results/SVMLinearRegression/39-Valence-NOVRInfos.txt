@@ -1,0 +1,11 @@
+ID: 39
+Name Valence-NOVR
+Function SVMLinearRegression
+
+R: 0.2690180947 with p-val of corr 0.000000
+R-square: 0.0723707353
+RMSE: 0.3851900401
+MSE: 0.1483713670
+MAE: 0.3318195996
+N* of Features 7
+N* of instances 421

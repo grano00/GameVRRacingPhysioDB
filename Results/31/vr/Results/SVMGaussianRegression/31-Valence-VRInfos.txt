@@ -1,0 +1,11 @@
+ID: 31
+Name Valence-VR
+Function SVMGaussianRegression
+
+R: 0.7807591794 with p-val of corr 0.000000
+R-square: 0.6095848963
+RMSE: 0.1928129002
+MSE: 0.0371768145
+MAE: 0.1109298311
+N* of Features 7
+N* of instances 391

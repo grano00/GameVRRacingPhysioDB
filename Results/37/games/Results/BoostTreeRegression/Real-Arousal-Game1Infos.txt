@@ -1,0 +1,11 @@
+ID: Real
+Name Arousal-Game1
+Function BoostTreeRegression
+
+R: 0.9116244542 with p-val of corr 0.000000
+R-square: 0.8310591456
+RMSE: 0.0524956677
+MSE: 0.0027557951
+MAE: 0.0361189677
+N* of Features 5
+N* of instances 436

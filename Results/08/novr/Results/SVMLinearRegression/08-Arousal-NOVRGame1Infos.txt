@@ -1,0 +1,11 @@
+ID: 08
+Name Arousal-NOVRGame1
+Function SVMLinearRegression
+
+R: 0.2883978418 with p-val of corr 0.000002
+R-square: 0.0831733151
+RMSE: 0.7284248128
+MSE: 0.5306027079
+MAE: 0.3252488028
+N* of Features 5
+N* of instances 262

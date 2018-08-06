@@ -1,0 +1,11 @@
+ID: 03
+Name Arousal-NOVR
+Function SVMLinearRegression
+
+R: 0.7261797747 with p-val of corr 0.000000
+R-square: 0.5273370651
+RMSE: 0.2218732701
+MSE: 0.0492277480
+MAE: 0.1724310145
+N* of Features 7
+N* of instances 430

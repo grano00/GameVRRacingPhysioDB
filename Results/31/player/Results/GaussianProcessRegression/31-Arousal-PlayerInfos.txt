@@ -1,0 +1,11 @@
+ID: 31
+Name Arousal-Player
+Function GaussianProcessRegression
+
+R: 0.9698185753 with p-val of corr 0.000000
+R-square: 0.9405480690
+RMSE: 0.1146904869
+MSE: 0.0131539078
+MAE: 0.0690903338
+N* of Features 8
+N* of instances 804

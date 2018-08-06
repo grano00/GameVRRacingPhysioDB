@@ -1,0 +1,11 @@
+ID: 02
+Name Arousal-VRGame2
+Function SVMLinearRegression
+
+R: 0.5269700064 with p-val of corr 0.000000
+R-square: 0.2776973876
+RMSE: 0.1843363913
+MSE: 0.0339799051
+MAE: 0.1516784694
+N* of Features 5
+N* of instances 194

@@ -1,0 +1,11 @@
+ID: 16
+Name Arousal-Player
+Function LinearRegression
+
+R: 0.1301940664 with p-val of corr 0.000306
+R-square: 0.0169504949
+RMSE: 0.2827058604
+MSE: 0.0799226035
+MAE: 0.2031114517
+N* of Features 8
+N* of instances 765

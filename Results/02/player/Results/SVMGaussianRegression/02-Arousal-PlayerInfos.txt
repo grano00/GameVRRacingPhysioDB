@@ -1,0 +1,11 @@
+ID: 02
+Name Arousal-Player
+Function SVMGaussianRegression
+
+R: 0.6899628636 with p-val of corr 0.000000
+R-square: 0.4760487531
+RMSE: 0.2885419463
+MSE: 0.0832564547
+MAE: 0.2120053330
+N* of Features 10
+N* of instances 974

@@ -1,0 +1,11 @@
+ID: 02
+Name Arousal-VR
+Function GaussianProcessRegression
+
+R: 0.9204136812 with p-val of corr 0.000000
+R-square: 0.8471613445
+RMSE: 0.0928387287
+MSE: 0.0086190296
+MAE: 0.0573321182
+N* of Features 5
+N* of instances 460

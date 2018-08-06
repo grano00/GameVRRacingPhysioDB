@@ -1,0 +1,11 @@
+ID: 03
+Name Valence-Player
+Function RandomForestRegression
+
+R: 0.9170290739 with p-val of corr 0.000000
+R-square: 0.8409423225
+RMSE: 0.1743627350
+MSE: 0.0304023633
+MAE: 0.1201092843
+N* of Features 8
+N* of instances 795

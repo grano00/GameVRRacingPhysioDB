@@ -1,0 +1,11 @@
+ID: 30
+Name Valence-NOVRGame2
+Function RandomForestRegression
+
+R: 0.9109760659 with p-val of corr 0.000000
+R-square: 0.8298773927
+RMSE: 0.0621942056
+MSE: 0.0038681192
+MAE: 0.0370474752
+N* of Features 5
+N* of instances 179

@@ -1,0 +1,11 @@
+ID: 16
+Name Arousal-NOVR
+Function LinearRegression
+
+R: 0.0856015508 with p-val of corr 0.096548
+R-square: 0.0073276255
+RMSE: 0.3232998904
+MSE: 0.1045228192
+MAE: 0.2402665726
+N* of Features 5
+N* of instances 378

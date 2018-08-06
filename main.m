@@ -106,16 +106,44 @@ disp('Applying Feature Selection Algorithm BY GAME');
 tableOfFiles = AutoRegFeatureSelection(tableOfFiles,'mergeGame');
 savetable(tableOfFiles,tabOfFilDir);
 
+%BY PLAYER
+disp('Applying Feature Selection Algorithm BY PLAYER');
+tableOfFiles = AutoRegFeatureSelection(tableOfFiles,'mergePlayer');
+savetable(tableOfFiles,tabOfFilDir);
+
 warning('on','all');
 
+%Testing Regressions
+ myFunctions = {@myGaussianProcessRegression,...
+     @myRandomForestRegressionErr, @myBoostTreeRegressionErr,...
+     @mySVMLinearRegressionErr,@mySVMGaussianRegressionErr,...
+     @myLinearRegressionErr};
+ 
+ 
+ myFunctionsName = {"GaussianProcessRegression",...
+     'RandomForestRegression','BoostTreeRegression',...
+     'SVMLinearRegression','SVMGaussianRegression',...
+     'LinearRegression'};
 
-disp('Using ML Algo for predict the data');
-tableOfFiles = RegTrainAndPred(tableOfFiles,tabOfFilDir);
-savetable(tableOfFiles,tabOfFilDir);
+%myFunctions = {@TimeGPRTest};
+%myFunctionsName = {'GPRardrationalquadraticNOAUTOTUNINGMultiCore'};
 
-disp('Create boxplot and excel files');
-tableOfFiles = produceResults(tableOfFiles,tabOfFilDir);
-savetable(tableOfFiles,tabOfFilDir);
+for i = 1:length(myFunctions)
+    disp(['Using ML Algo (' myFunctionsName{i} ') for predict the data']);
+    tableOfFiles = RegTrainAndPred(tableOfFiles,tabOfFilDir,myFunctions{i},myFunctionsName{i});
+    mkdir([tabOfFilDir '/' myFunctionsName{i}])
+    savetable(tableOfFiles,[tabOfFilDir '/' myFunctionsName{i}]);
+end
+
+%Final Regression
+
+ myFunctions = {@myGaussianProcessRegressionAutoTuning};
+ myFunctionsName = {"myGaussianProcessRegressionAutoTuning"};
+ 
+disp(['Using ML Algo (' myFunctionsName{1} ') for predict the data']);
+tableOfFiles = RegTrainAndPred(tableOfFiles,tabOfFilDir,myFunctions{i},myFunctionsName{1});
+mkdir([tabOfFilDir '/' myFunctionsName{1}])
+savetable(tableOfFiles,[tabOfFilDir '/' myFunctionsName{1}]);
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %   MERGE REGRESSION   %

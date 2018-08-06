@@ -1,0 +1,11 @@
+ID: 31
+Name Valence-VRGame2
+Function GaussianProcessRegression
+
+R: 0.8172227044 with p-val of corr 0.000000
+R-square: 0.6678529486
+RMSE: 0.1539849252
+MSE: 0.0237113572
+MAE: 0.1112512608
+N* of Features 7
+N* of instances 204

@@ -1,0 +1,11 @@
+ID: Real
+Name Arousal-Game2
+Function RandomForestRegression
+
+R: 0.9124426636 with p-val of corr 0.000000
+R-square: 0.8325516143
+RMSE: 0.1128398823
+MSE: 0.0127328390
+MAE: 0.0565233276
+N* of Features 7
+N* of instances 385

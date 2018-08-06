@@ -1,0 +1,11 @@
+ID: Real
+Name Valence-Game2
+Function SVMLinearRegression
+
+R: 0.5847287830 with p-val of corr 0.000000
+R-square: 0.3419077496
+RMSE: 0.3917434834
+MSE: 0.1534629568
+MAE: 0.2909918677
+N* of Features 7
+N* of instances 375

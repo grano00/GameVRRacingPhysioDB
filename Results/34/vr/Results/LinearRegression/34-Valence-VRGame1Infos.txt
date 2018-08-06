@@ -1,0 +1,11 @@
+ID: 34
+Name Valence-VRGame1
+Function LinearRegression
+
+R: 0.0011994129 with p-val of corr 0.986416
+R-square: 0.0000014386
+RMSE: 0.3333403109
+MSE: 0.1111157629
+MAE: 0.2495552336
+N* of Features 5
+N* of instances 204
