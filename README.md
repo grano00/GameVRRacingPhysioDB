@@ -1,5 +1,7 @@
 # GameAndVRRacingAnalysis
 
+Please do not share this link with other people until the related article is published, and this message will be replaced with an accademic  license
+
 #Directory Structure
 
 The directories follows this structure:
@@ -12,4 +14,5 @@ The directories follows this structure:
 - "./Results/" where are stored the files of the results
 
 
-NB: The data was stored with the following directory structure: id/vr; id/novr (eg 01/vr;01/novr); 
+NB: The data was stored with the following directory structure: id/vr; id/novr (eg 01/vr;01/novr);
+
