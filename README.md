@@ -14,5 +14,5 @@ The directories follows this structure:
 - "./Results/" where are stored the files of the results
 
 
-NB: The data was stored with the following directory structure: id/vr; id/novr (eg 01/vr;01/novr);
+NB: The data has been stored with the following directory structure: id/vr; id/novr (eg 01/vr;01/novr);
 
