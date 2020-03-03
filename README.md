@@ -8,6 +8,20 @@ This repository contains the RAGA dataset. It is an affective a labelled dataset
 
 Granato, M., Gadia, D., Maggiorini, D. et al. An empirical study of players’ emotions in VR racing games based on a dataset of physiological data. Multimed Tools Appl (2020). https://doi.org/10.1007/s11042-019-08585-y
 
+Bibtex:
+
+```tex
+@article{granato2020empirical,
+  title={An empirical study of players’ emotions in VR racing games based on a dataset of physiological data}, 
+  DOI={10.1007/s11042-019-08585-y}, 
+  journal={Multimedia Tools and Applications}, 
+  author={Granato, Marco and Gadia, Davide and Maggiorini, Dario and Ripamonti, Laura A.}, 
+  year={2020}, 
+  month={Feb}
+}
+```
+  
+
 # Directory Structure
 
 The directories available in this repository follows this structure:
