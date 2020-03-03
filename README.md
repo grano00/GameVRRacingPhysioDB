@@ -2,7 +2,7 @@
 
 # Introduction
 
-This repository contains the RAGA dataset. It is an affective a labelled dataset which use racing games (in VR and with a standard desktop) as stimuli. In particular, it involves physiological data (5 facial EMG, ECG, EDA, and Respiration) alligned with the ground truth. The latter has been expressed in core affect, i.e., valence and arousal data. It has been labeled through a self-assessment over all the game session. For more details see [An Empirical Study of Players’ Emotions in VR Racing Games Based on a Dataset of Physiological Data](https://link.springer.com/article/10.1007/s11042-019-08585-y) by Granato et al.
+This repository contains the RAGA dataset. It is an affective and labeled dataset that uses racing games (in VR and with a standard desktop) as stimuli. In particular, it involves physiological data (5 facial EMG, ECG, EDA, and Respiration) aligned with the ground truth. The latter has been expressed in core affect, i.e., valence and arousal data. It has been labeled through a self-assessment over all the game sessions. For more details see [An Empirical Study of Players’ Emotions in VR Racing Games Based on a Dataset of Physiological Data](https://link.springer.com/article/10.1007/s11042-019-08585-y) by Granato et al.
 
 # Citation
 
@@ -26,8 +26,8 @@ Bibtex:
 
 The directories available in this repository follows this structure:
 
-- "./" The source code of matlab file to analyse the data
-- "./Functions" contains the functions for the matlab source code
+- "./" The source code of Matlab file to analyze the data
+- "./Functions" contains the functions for the Matlab source code
 - "./Data/Examples" The test files
 - "./Data/Real" the real data 
 - "./MatlabDataset" where are stored the .mat files
@@ -35,6 +35,5 @@ The directories available in this repository follows this structure:
 
 
 NB: The data have been stored with the following directory structure: id/vr; id/novr (eg 01/vr;01/novr);
-
 
 
